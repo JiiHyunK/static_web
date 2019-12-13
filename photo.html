@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SuHyun Kim - Official Website</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+        type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.css" rel="stylesheet">
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Custom scripts for this template -->
+<script src="js/clean-blog.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">SuHyun K.</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="video.html">Video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="photo.html">Photo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="height:auto;">
+        <div class="overlay" stype="background-color:#ffffff;"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10">
+                    <div class="post-heading" style="padding:150px 200px 0 0;">
+                        <h1>Photo</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <div class="container">
+        <div class="row" style="position:relative; width:100%; height:auto">
+            <div class="col-lg-12 col-md-12" style="position: relative; width:100%;" id="wrap">
+                <img src="./img/1.jpeg" id="l1" style="width:50%; height:auto; position: relative;">
+                <img src="./img/3.jpeg" id="r1to2" style="width:50%; position: absolute; ">
+                <img src="./img/4.jpeg" id="l2" style="width:50%; height:auto; position: relative; padding-top:1%">
+            </div>
+        </div>
+        <div class="row" style="position:relative; width:100%; height:auto">        
+            <div class="col-lg-12 col-md-12" style="position: relative; width:100%;">
+                <img src="./img/2.jpeg" id="l3" style="width:50%; height:auto; position: relative; margin-top:3%;">
+                <img src="./img/5.jpeg" id="r3" style="width:50%; position: absolute; margin-left:1.5%; margin-top:3%;">
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/suhyuni_piano/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/suhyun.kim2/">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fas fa-circle fa-stack-2x"></i>
+                                    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; JiHyun Kim 2019
+                        <br>jhwebcontact@gmail.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+            $(window).on('load', function () {          
+                var r1to2 = $('#r1to2');
+                var l1 = $('#l1');
+                var bool = false;
+                function step1() {
+                    l1.css("height", $('#l2').height());
+                    bool = true;
+                }
+                function step2() {
+                    if (bool == true) {
+                        r1to2.css("height", $('#l1').height() + $('#l2').height() + $('#wrap').height() * 0.01);
+                    }
+                }
+                step1();
+                step2();
+            });
+    </script>
+    <script>
+    $(window).on('load', function () {
+
+        var l3=$('#l3');
+        var r3=$('#r3');
+        r3.css("height",l3.height());
+
+    });
+    </script>
+</body>
+
+</html>
